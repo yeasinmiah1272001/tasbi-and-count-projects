@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Text Styler</title>
+  <style>
+    #h {
+    }
+  </style>
+</head>
+<body id="h" class="bg-gray-200 flex items-center justify-center h-screen ">
+  <div class="bg-white p-4 rounded shadow-md">
+    <div class="mb-4">
+      <button id="boldButton" class="px-3 py-1 bg-blue-500 text-white rounded mr-2">Bold</button>
+      <button id="italicButton" class="px-3 py-1 bg-blue-500 text-white rounded">Italic</button>
+    </div>
+    <div>
+      <input id="inputField" type="text" class="border p-1 w-full">
+    </div>
+    <div id="outputText" class="mt-4"></div>
+  </div>
+
+  <script>
+    var boldButton = document.getElementById('boldButton');
+    var italicButton = document.getElementById('italicButton');
+    var inputField = document.getElementById('inputField');
+    var outputText = document.getElementById('outputText');
+
+    boldButton.addEventListener('click', function() {
+      outputText.innerHTML = '<b>' + inputField.value + '</b>';
+    });
+
+    italicButton.addEventListener('click', function() {
+      outputText.innerHTML = '<em>' + inputField.value + '</em>';
+    });
+  </script>
+</body>
+</html>
